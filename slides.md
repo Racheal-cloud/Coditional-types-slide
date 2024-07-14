@@ -37,7 +37,7 @@ mdc: true
   <button @click="$slidev.nav.openInEditor()" title="Open in Editor" class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon:edit />
   </button>
-  <a href="https://github.com/slidevjs/slidev" target="_blank" alt="GitHub" title="Open in GitHub"
+  <a href="https://github.com/Racheal-cloud/Coditional-types-slide" target="_blank" alt="GitHub" title="Open in GitHub"
     class="text-xl slidev-icon-btn opacity-50 !border-none !hover:text-white">
     <carbon-logo-github />
   </a>
@@ -61,20 +61,7 @@ At the heart of most useful programs, we have to make decisions based on input. 
 <br>
 
 ```ts
-interface Animal {
-  live(): void;
-}
-interface Dog extends Animal {
-  woof(): void;
-}
- 
-type Example1 = Dog extends Animal ? number : string;
-        
-type Example1 = number
- 
-type Example2 = RegExp extends Animal ? number : string;
-        
-type Example2 = string
+type IsString<T> = T extends string ? "Yes" : "No";
 ```
 
 <!--
